@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "author": "Diana Mucheke",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "board-esp32-devkit-c-v4",
+      "id": "esp",
+      "top": 0,
+      "left": -20,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-dht22",
+      "id": "dht1",
+      "top": -20,
+      "left": -220,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-relay-module",
+      "id": "relay1",
+      "top": -100,
+      "left": 120,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-gas-sensor",
+      "id": "gas1",
+      "top": 120,
+      "left": 120,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r1",
+      "top": 140,
+      "left": -250,
+      "attrs": {
+        "value": "10000"
+      }
+    }
+  ],
+
+  "connections": [
+    ["esp:TX", "$serialMonitor:RX", "", []],
+    ["esp:RX", "$serialMonitor:TX", "", []],
+
+    ["esp:3V3", "dht1:VCC", "red", []],
+    ["esp:GND.1", "dht1:GND", "black", []],
+    ["esp:15", "dht1:SDA", "green", []],
+
+    ["dht1:VCC", "r1:1", "red", []],
+    ["dht1:SDA", "r1:2", "green", []],
+
+    ["relay1:VCC", "esp:5V", "red", []],
+    ["relay1:GND", "esp:GND.1", "black", []],
+    ["relay1:IN", "esp:27", "green", []],
+
+    ["gas1:VCC", "esp:5V", "red", []],
+    ["gas1:GND", "esp:GND.1", "black", []],
+    ["gas1:AOUT", "esp:34", "green", []]
+  ],
+
+  "dependencies": {}
+}
