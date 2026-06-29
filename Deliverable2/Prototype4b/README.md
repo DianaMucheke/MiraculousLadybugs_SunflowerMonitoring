@@ -1,26 +1,34 @@
-# Prototype 4(b): Dual ESP32 Interfaced Monitoring System
+# Prototype 4(b): Interfaced ESP32 Monitoring System
 
 ## Overview
 
-This prototype demonstrates a distributed IoT architecture consisting of two ESP32 development boards communicating with one another. One ESP32 is interfaced with an MQ-5 gas sensor, while the second ESP32 is connected to a DHT22 temperature and humidity sensor. The objective of this architecture is to demonstrate how multiple microcontrollers can cooperate to monitor different environmental parameters within a smart agricultural system.
+This prototype demonstrates an interfaced ESP32-based monitoring system for sunflower farming. The original architecture consisted of two ESP32 development boards, where one ESP32 interfaced with an MQ-5 gas sensor while the second ESP32 interfaced with a DHT22 temperature and humidity sensor.
 
-Although the original architecture specified the use of two ESP32 boards, the laboratory technician confirmed that the required functionality could be successfully implemented using a single ESP32. To optimize the available hardware resources, our group adopted a single-board implementation while preserving the intended system functionality.
+Following consultation with the laboratory technician, our group implemented the system using a single ESP32, as it was confirmed that the required functionality could be achieved without compromising the project objectives. This approach also enabled efficient sharing of the available hardware resources among the project groups.
 
 ## Components Used
 
-* ESP32 Development Board(s)
-* MQ-5 Gas Sensor
-* DHT22 Temperature and Humidity Sensor
-* Jumper Wires
-* Breadboard
-* USB Power Supply
+- ESP32 Development Board
+- DHT22 Temperature and Humidity Sensor
+- MQ-5 Gas Sensor
+- Breadboard
+- Jumper Wires
+- USB Cable
 
 ## System Description
 
-The monitoring system collects real-time environmental measurements from the connected sensors. The DHT22 sensor measures ambient temperature and relative humidity, while the MQ-5 sensor detects the presence of combustible gases such as LPG, methane, propane, and butane.
+The ESP32 continuously collects temperature, humidity, and gas concentration readings from the connected sensors. The sensor values are processed in real time and displayed through the serial terminal.
 
-Sensor readings are processed by the ESP32 and displayed through the serial terminal. During testing, all sensors operated correctly and produced valid real-time readings. The relay module remained in the **OFF** state because the measured environmental conditions did not exceed the predefined threshold values required to trigger activation. This confirmed that the relay control logic was functioning correctly.
+This prototype validates the communication between the ESP32 and multiple sensors and demonstrates successful environmental monitoring for smart agriculture applications.
 
-## Physical Demonstration
+## Wokwi Simulation
 
-The physical implementation successfully demonstrated sensor integration, real-time data acquisition, and system functionality. Despite using a single ESP32 instead of two, the prototype met the intended objectives and validated the proposed architecture.
+https://wokwi.com/projects/467063095225347073
+
+## Source Code
+
+The source code is available in the `Code` directory.
+
+## Images
+
+![Prototype 4B](Prototype4b/4b.png)
