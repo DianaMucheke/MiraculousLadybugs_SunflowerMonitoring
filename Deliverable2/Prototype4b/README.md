@@ -24,11 +24,3 @@ This prototype validates the communication between the ESP32 and multiple sensor
 ## Wokwi Simulation
 
 https://wokwi.com/projects/467063095225347073
-
-## Source Code
-
-The source code is available in the `Code` directory.
-
-## Images
-
-![Prototype 4B](Prototype4b/4b.png)
