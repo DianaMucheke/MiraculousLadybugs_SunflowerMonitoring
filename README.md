@@ -36,6 +36,7 @@ Prototype 4(c) demonstrates the successful physical implementation and testing o
 https://wokwi.com/projects/467065745098944513
 
 For more details, see **Prototype4C.md**.
+
 ---
 
 ## Conclusion
